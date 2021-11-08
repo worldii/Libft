@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 19:00:51 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/08 19:09:45 by jonghapa         ###   ########.fr       */
+/*   Created: 2021/11/08 19:38:30 by jonghapa          #+#    #+#             */
+/*   Updated: 2021/11/08 19:39:48 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char*str, int c)
+void	bzero(void *s, unsigned int n)
 {
-	while (*str)
-	{
-		if (*str == c)
-			return (str);
-	}
-	return (0);
+	
 }

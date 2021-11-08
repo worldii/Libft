@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 19:00:51 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/08 19:09:45 by jonghapa         ###   ########.fr       */
+/*   Created: 2021/11/08 19:10:20 by jonghapa          #+#    #+#             */
+/*   Updated: 2021/11/08 19:19:28 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char*str, int c)
+int	ft_strlen(char *str)
 {
+	int	len;
+
+	len = 0;
 	while (*str)
 	{
-		if (*str == c)
-			return (str);
+		str++;
+		len++;
+	}
+	return (len);
+}
+
+char	*strrchr(const char *str, int c)
+{
+	int		len;
+	char	*temp;
+
+	len = ft_strlen(str);
+	temp = str + len;
+	while (temp >= str)
+	{
+		if (*temp == c)
+			return (temp);
+		temp--;
 	}
 	return (0);
 }

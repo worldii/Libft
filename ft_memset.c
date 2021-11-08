@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 19:00:51 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/08 19:09:45 by jonghapa         ###   ########.fr       */
+/*   Created: 2021/11/08 19:30:58 by jonghapa          #+#    #+#             */
+/*   Updated: 2021/11/08 19:37:42 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char*str, int c)
+void	*ft_memset(void	*ptr, int value, unsigned int n)
 {
-	while (*str)
+	int	idx;
+
+	idx = 0;
+	while (idx < n)
 	{
-		if (*str == c)
-			return (str);
+		*(ptr + idx) = value;
+		idx++;
 	}
-	return (0);
+	return (ptr);
 }
