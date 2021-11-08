@@ -1,25 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 19:38:30 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/08 19:50:14 by jonghapa         ###   ########.fr       */
+/*   Created: 2021/11/08 19:43:24 by jonghapa          #+#    #+#             */
+/*   Updated: 2021/11/08 20:07:49 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *ptr, unsigned int n)
+void	*ft_memchr(void	*ptr, int value, unsigned int num)
 {
-	unsigned int	idx;
 	char			*temp;
+	unsigned int	idx;
 
 	idx = 0;
 	temp = (char *) ptr;
-	while (idx < n)
+	while (idx < num && *temp)
 	{
-		*(temp + idx) = 0;
-		idx++;
-	}	
+		if (*temp == value)
+			return (ptr);
+		ptr++;
+		temp++;
+	}
+	return (0);
 }
+
+/*
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+
+	char * pch;
+	  char str[] = "Example string";
+
+	  pch = (char*)ft_memchr(str, 'p', strlen(str));
+
+  if (pch != NULL)
+    printf("'p' found at position %d.\n", pch - str + 1);
+  else
+    printf("'p' not found.\n");
+}*/

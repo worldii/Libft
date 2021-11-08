@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 19:10:20 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/08 19:52:58 by jonghapa         ###   ########.fr       */
+/*   Created: 2021/11/08 20:28:21 by jonghapa          #+#    #+#             */
+/*   Updated: 2021/11/09 00:51:52 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+void	*ft_memcpy(void *dest, const void *source, unsigned int num)
 {
-	int	len;
+	unsigned int	idx;
 
-	len = 0;
-	while (*str)
+	idx = 0;
+	if (dest == 0 || source == 0)
+		return (0);
+	while (idx < num)
 	{
-		str++;
-		len++;
+		((unsigned char *) dest)[idx] = ((unsigned char *) source)[idx];
+		idx++;
 	}
-	return (len);
-}
-
-char	*strrchr(const char *str, int c)
-{
-	int		len;
-	char	*temp;
-
-	len = ft_strlen(str);
-	temp = (char* ) str + len;
-	while (temp >= str)
-	{
-		if (*temp == c)
-			return (temp);
-		temp--;
-	}
-	return (0);
+	return (dest);
 }
