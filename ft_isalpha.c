@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 16:29:52 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/08 16:30:14 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/16 17:59:37 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,7 @@ int	ft_isalpha(int c)
 		return (2);
 	return (0);
 }
+/*#include<stdio.h>
+int main(void){
+printf("%d", ft_isalpha('a'));
+}*/

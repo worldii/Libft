@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 16:31:00 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/08 16:33:10 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:00:39 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,7 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+/*
+#include<stdio.h>
+int main(void){
+	printf("%d", ft_isdigit('1'));}*/

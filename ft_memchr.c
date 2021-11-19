@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:43:24 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/08 20:07:49 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/17 03:55:44 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	*ft_memchr(void	*ptr, int value, unsigned int num)
 			return (ptr);
 		ptr++;
 		temp++;
+		idx++;
 	}
 	return (0);
 }
