@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 00:43:22 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 13:58:02 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:13:23 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,11 @@ int	count_word(char const *s, char c)
 	}
 	return (count);
 }
-void ass_word(char const *s, char c, char **word)
-{
 
-}
-char	**ft_split(char const *s, char c)
+void	ass_word(char const *s, char c, char **word, int *widx)
 {
-	char	**word;
-	int		count;
-	int		widx;
-	int		tempcount;
+	int	tempcount;
 
-	widx = 0;
-	count = count_word(s, c);
-	word = (char **) malloc (sizeof (char *) * (count + 1));
-	if (word == NULL)
-		return (NULL);
 	while (*s)
 	{
 		while (*s && *s == c)
@@ -62,20 +51,33 @@ char	**ft_split(char const *s, char c)
 			}
 			s -= tempcount;
 			tempcount = 0;
-			word[widx] = (char *) malloc(sizeof(char) * (tempcount + 1));
-			if (word[widx] == NULL)
-				return (NULL);
+			word[*widx] = (char *) malloc(sizeof(char) * (tempcount + 1));
+			if (word[*widx] == NULL)
+				return ;
 			while (*s && *s != c)
-			{
-				word[widx][tempcount++] = *s;
-				s++;
-			}
-			word[widx++][tempcount] = '\0';
+				word[*widx][tempcount++] = *s++;
+			word[(*widx)++][tempcount] = '\0';
 		}
 	}
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**word;
+	int		count;
+	int		widx;
+
+	widx = 0;
+	count = count_word(s, c);
+	word = (char **) malloc (sizeof (char *) * (count + 1));
+	if (word == NULL)
+		return (NULL);
+	ass_word(s, c, word, &widx);
 	word[count] = NULL;
 	return (word);
 }
+/*
+#include<stdio.h>
 
 int main(void)
 {
@@ -86,4 +88,4 @@ int main(void)
 		printf("%s\n", word[i]);
 	}
 	return (0);
-}
+}*/
