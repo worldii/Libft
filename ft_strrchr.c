@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:10:20 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:34:22 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:45:01 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *str, int c)
 	int		len;
 	char	*temp;
 
-	len = ft_strlen(str);
+	len = ft_strlen((char *)str);
 	temp = (char *) str + len;
 	while (temp >= str)
 	{

@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 00:20:59 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:37:00 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:44:28 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	flag = 1;
 	tidx = 0;
-	s1len = ft_strlen(s1);
+	s1len = ft_strlen((char *)s1);
 	trimmed = (char *) malloc (sizeof(char) * s1len + 1);
 	if (trimmed == NULL)
 		return (NULL);

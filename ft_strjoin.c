@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 00:06:05 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:22:57 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:44:45 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		s1len;
 	int		s2len;
 
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
+	s1len = ft_strlen((char *)s1);
+	s2len = ft_strlen((char *)s2);
 	new = (char *) malloc(sizeof(char) * (s1len + s2len - 1));
 	if (new == NULL)
 		return (NULL);
