@@ -6,11 +6,11 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:03:42 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 16:04:09 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:57:43 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f) (unsigned int, char *))
+/*void ft_striteri(char *s, void (*f) (unsigned int, char *))
 {
 
-}
+}*/

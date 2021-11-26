@@ -6,11 +6,11 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 05:29:48 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/24 05:52:59 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:57:26 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *src)
+int	ft_strlen(char *src)
 {
 	int	len;
 
@@ -22,14 +22,14 @@ int	ft_strlen(const char *src)
 
 unsigned int	ft_strlcat(char *dst, const char *src, unsigned int len)
 {
-	const unsigned int	srclen;
-	const unsigned int	dstlen;
+	unsigned int		srclen;
+	unsigned int		dstlen;
 	unsigned int		didx;
 	unsigned int		sidx;
 
 	didx = 0;
 	sidx = 0;
-	srclen = ft_strlen(src);
+	srclen = ft_strlen((char*)src);
 	dstlen = ft_strlen(dst);
 	if (srclen == len)
 		return (len + srclen);
