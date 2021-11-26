@@ -6,24 +6,11 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 00:06:05 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 00:18:35 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:22:57 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strlen(char const *s1)
-{
-	int	idx;
-
-	idx = 0 ;
-	while (*s1)
-	{
-		s1++;
-		idx++;
-	}
-	return (idx);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

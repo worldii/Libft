@@ -6,18 +6,18 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:16:32 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 16:41:35 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:19:58 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include "libft.h"
 
-void	put_char(char c, int nb)
+static void	put_char(char c, int nb)
 {
 	write(nb, &c, 1);
 }
 
-void	calculate(int nb, int fd)
+static void	calculate(int nb, int fd)
 {
 	if (nb == 0)
 		return ;

@@ -6,13 +6,14 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:30:58 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/17 03:44:02 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:18:48 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-void	*ft_memset(void	*ptr, int value, unsigned int n)
+void	*ft_memset(void	*ptr, int value, size_t n)
 {
-	unsigned int	idx;
+	size_t			idx;
 	unsigned char	*temp;
 
 	temp = (unsigned char *) ptr;

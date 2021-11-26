@@ -6,14 +6,15 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:43:24 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/17 03:55:44 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:16:22 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-void	*ft_memchr(void	*ptr, int value, unsigned int num)
+void	*ft_memchr(void	*ptr, int value, size_t num)
 {
-	char			*temp;
-	unsigned int	idx;
+	char	*temp;
+	size_t	idx;
 
 	idx = 0;
 	temp = (char *) ptr;

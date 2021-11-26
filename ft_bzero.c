@@ -6,14 +6,15 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:38:30 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/08 19:50:14 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:14:03 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-void	ft_bzero(void *ptr, unsigned int n)
+void	ft_bzero(void *ptr, size_t n)
 {
-	unsigned int	idx;
-	char			*temp;
+	size_t	idx;
+	char	*temp;
 
 	idx = 0;
 	temp = (char *) ptr;

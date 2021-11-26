@@ -6,14 +6,16 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 06:21:22 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/17 06:32:03 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:17:06 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_memcmp(const void *ptr1, const void *ptr2, unsigned int num)
+#include "libft.h"
+
+int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 {
-	char			*pptr1;
-	char			*pptr2;
-	unsigned int	idx;
+	char	*pptr1;
+	char	*pptr2;
+	size_t	idx;
 
 	idx = 0;
 	pptr1 = (char *) ptr1 ;

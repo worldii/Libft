@@ -6,10 +6,10 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:07:56 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 16:40:59 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:19:21 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

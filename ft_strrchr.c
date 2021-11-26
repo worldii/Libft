@@ -6,22 +6,10 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:10:20 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/16 23:15:32 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:34:22 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_strlen(const char *str)
-{
-	int	len;
-
-	len = 0;
-	while (*str)
-	{
-		str++;
-		len++;
-	}
-	return (len);
-}
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {

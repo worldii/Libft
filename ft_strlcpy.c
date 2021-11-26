@@ -6,13 +6,14 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:07:45 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/20 01:07:55 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:25:19 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
-	unsigned int	idx;
+	size_t	idx;
 
 	idx = 0;
 	while (idx + 1 < size && src[idx])

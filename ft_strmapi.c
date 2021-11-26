@@ -6,11 +6,11 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:38:31 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 16:56:07 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:32:03 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include "libft.h"
 /*
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {

@@ -6,11 +6,11 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:04:22 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 16:06:40 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:19:02 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

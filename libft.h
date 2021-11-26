@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 14:57:21 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 14:57:43 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:08:21 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+int	ft_atoi(const char *str);
+void	ft_bzero(void *ptr, size_t n);
+void	*ft_calloc(unsigned int count, unsigned int size);
 
 #endif

@@ -6,24 +6,11 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 00:20:59 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 00:42:54 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:37:00 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strlen(char const *s1)
-{
-	int	idx;
-
-	idx = 0 ;
-	while (*s1)
-	{
-		s1++;
-		idx++;
-	}
-	return (idx);
-}
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

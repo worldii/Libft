@@ -6,13 +6,13 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:56:11 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 16:42:04 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:15:44 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include "libft.h"
 
-int	get_len(long long n)
+static int	get_len(long long n)
 {
 	int	size;
 

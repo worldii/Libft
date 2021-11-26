@@ -6,9 +6,10 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:03:42 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 16:57:43 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:22:38 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 /*void ft_striteri(char *s, void (*f) (unsigned int, char *))
 {

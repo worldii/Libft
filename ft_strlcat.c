@@ -6,30 +6,21 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 05:29:48 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 16:57:26 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:24:45 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_strlen(char *src)
+size_t	ft_strlcat(char *dst, const char *src, size_t len)
 {
-	int	len;
-
-	len = 0;
-	while (src[len])
-		len++;
-	return (len);
-}
-
-unsigned int	ft_strlcat(char *dst, const char *src, unsigned int len)
-{
-	unsigned int		srclen;
-	unsigned int		dstlen;
-	unsigned int		didx;
-	unsigned int		sidx;
+	size_t	srclen;
+	size_t	dstlen;
+	size_t	didx;
+	size_t	sidx;
 
 	didx = 0;
 	sidx = 0;
-	srclen = ft_strlen((char*)src);
+	srclen = ft_strlen((char *)src);
 	dstlen = ft_strlen(dst);
 	if (srclen == len)
 		return (len + srclen);

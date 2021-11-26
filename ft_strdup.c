@@ -6,21 +6,11 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 06:07:04 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/24 06:07:59 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:21:36 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strlen(char *src)
-{
-	int	len;
-
-	len = 0;
-	while (src[len])
-		len++;
-	return (len);
-}
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {

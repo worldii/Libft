@@ -6,9 +6,10 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 16:48:27 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/08 16:49:20 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:31:42 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {

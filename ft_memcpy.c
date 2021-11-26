@@ -6,13 +6,14 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 20:28:21 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/17 06:20:51 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:17:35 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *source, unsigned int num)
+void	*ft_memcpy(void *dest, const void *source, size_t num)
 {
-	unsigned int	idx;
+	size_t	idx;
 
 	idx = 0;
 	while (idx < num)

@@ -6,11 +6,13 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 05:22:50 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/24 05:29:31 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:22:04 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	atoi(const char *str)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
 	int	sign;
 	int	sum;

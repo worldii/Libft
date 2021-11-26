@@ -6,13 +6,13 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 00:43:22 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/25 14:13:23 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:20:37 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	count_word(char const *s, char c)
+static int	count_word(char const *s, char c)
 {
 	int	count;
 
@@ -33,7 +33,7 @@ int	count_word(char const *s, char c)
 	return (count);
 }
 
-void	ass_word(char const *s, char c, char **word, int *widx)
+static void	ass_word(char const *s, char c, char **word, int *widx)
 {
 	int	tempcount;
 

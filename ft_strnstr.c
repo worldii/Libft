@@ -6,13 +6,15 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:08:40 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/24 04:12:45 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:33:58 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	find_str(const char *big, const char *little, unsigned int len)
+#include "libft.h"
+
+static int	find_str(const char *big, const char *little, size_t len)
 {
-	unsigned int	idx;
+	size_t	idx;
 
 	idx = 0;
 	while (idx < len && *big && *little)
@@ -26,10 +28,10 @@ int	find_str(const char *big, const char *little, unsigned int len)
 	return (1);
 }
 
-char	*ft_strnstr(const char *big, const char *little, unsigned int len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned int	idx;
-	int				llen;
+	size_t	idx;
+	int		llen;
 
 	idx = 0;
 	llen = 0;

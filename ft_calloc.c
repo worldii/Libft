@@ -6,16 +6,16 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 05:53:55 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/24 06:06:20 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:09:53 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_calloc(unsigned int count, unsigned int size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	char			*temp;
-	unsigned int	idx;
+	char	*temp;
+	size_t	idx;
 
 	idx = 0;
 	if (size == 0 || count == 0)
