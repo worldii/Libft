@@ -6,27 +6,30 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 00:20:59 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/27 21:55:38 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/27 21:59:52 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static int ft_ischarset(char s, char const *set)
+
+static int	ft_ischarset(char s, char const *set)
 {
 	int	sidx;
-	
+
 	sidx = 0;
 	while (set[sidx])
 		if (set[sidx++] == s)
 			return (1);
 	return (0);
 }
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		s1len;
 	char	*trimmed;
 	int		tidx;
 	int		sidx;
+
 	tidx = 0;
 	sidx = 0;
 	s1len = ft_strlen((char *)s1);
