@@ -6,7 +6,7 @@
 #    By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/26 14:50:35 by jonghapa          #+#    #+#              #
-#    Updated: 2021/11/26 14:52:49 by jonghapa         ###   ########.fr        #
+#    Updated: 2021/11/27 03:08:15 by jonghapa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) $< -o $@ 
+	$(CC) $(CFLAGS) $< -o $@
 
 $(NAME) : $(OBJ)
 	ar crs $@ $(OBJ)
@@ -35,4 +35,3 @@ fclean: clean
 re : fclean all
 
 .PHONY: clean fclean re $(NAME) all
-

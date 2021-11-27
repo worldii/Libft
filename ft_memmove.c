@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 00:51:17 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:18:15 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/27 19:33:32 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@
 void	*ft_memmove(void *dest, const void *source, size_t num)
 {
 	size_t	idx;
+	char	*buf;
 
-	idx = 0;
-	while (idx < num)
-	{
-		((unsigned char *) dest)[idx] = ((unsigned char *) source)[idx];
-		idx++;
-	}
+	buf = (char *) malloc (sizeof(char) * (num + 1));
+	idx = -1;
+	while (++idx < num)
+		((unsigned char *) buf)[idx] = ((unsigned char *) source)[idx];
+	idx = -1;
+	while (++idx < num)
+		((unsigned char *)dest)[idx] = ((unsigned char *)buf)[idx];
 	return (dest);
 }
 /*

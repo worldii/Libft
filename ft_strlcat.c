@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 05:29:48 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:24:45 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/27 20:31:07 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,7 +22,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t len)
 	sidx = 0;
 	srclen = ft_strlen((char *)src);
 	dstlen = ft_strlen(dst);
-	if (srclen == len)
+	if (dstlen > len)
+		dstlen = len;
+	if (dstlen == len)
 		return (len + srclen);
 	if (srclen + dstlen < len)
 	{

@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:07:45 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:25:19 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/27 04:22:27 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,12 +16,15 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size)
 	size_t	idx;
 
 	idx = 0;
-	while (idx + 1 < size && src[idx])
+	if (size > 0)
 	{
-		dest[idx] = src[idx];
-		idx++;
+		while (idx + 1 < size && src[idx])
+		{
+			dest[idx] = src[idx];
+			idx++;
+		}
+		dest[idx] = '\0';
 	}
-	dest[idx] = '\0';
 	while (src[idx])
 		idx++;
 	return (idx);

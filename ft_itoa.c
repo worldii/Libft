@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:56:11 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:15:44 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/27 20:49:44 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 	size = 0;
 	if (n < 0)
 	{
-		temp = -n;
+		temp = -temp;
 		size++;
 	}
 	size += get_len(temp);
@@ -61,6 +61,6 @@ char	*ft_itoa(int n)
 #include<stdio.h>
 int main(void)
 {
-	char *temp = ft_itoa(+1231);
+	char *temp = ft_itoa(-2147483648);
 	printf("%s", temp);
 }*/

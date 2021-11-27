@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 00:43:22 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:20:37 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/27 21:10:25 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ static void	ass_word(char const *s, char c, char **word, int *widx)
 				s++;
 			}
 			s -= tempcount;
-			tempcount = 0;
 			word[*widx] = (char *) malloc(sizeof(char) * (tempcount + 1));
+			tempcount = 0;
 			if (word[*widx] == NULL)
 				return ;
 			while (*s && *s != c)
@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 
 	widx = 0;
 	count = count_word(s, c);
-	word = (char **) malloc (sizeof (char *) * (count + 1));
+	word = (char **) malloc (sizeof(char *) * (count + 1));
 	if (word == NULL)
 		return (NULL);
 	ass_word(s, c, word, &widx);
