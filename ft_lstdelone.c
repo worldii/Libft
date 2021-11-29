@@ -6,13 +6,13 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 02:18:08 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/28 02:27:25 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/29 14:53:52 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst)
 	{

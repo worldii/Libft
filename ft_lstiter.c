@@ -6,20 +6,17 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 02:31:07 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/28 02:33:22 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/29 16:08:56 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, vid (*f) (void *))
+void	ft_lstiter(t_list *lst, void (*f) (void *))
 {
-	if (lst)
+	while (lst)
 	{
-		while (lst)
-		{
-			f (lst->content);
-			lst = lst -> next;
-		}
+		f (lst->content);
+		lst = lst -> next;
 	}
 }

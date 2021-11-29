@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:43:24 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:16:22 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/29 18:18:27 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,7 +18,7 @@ void	*ft_memchr(void	*ptr, int value, size_t num)
 
 	idx = 0;
 	temp = (char *) ptr;
-	while (idx < num && *temp)
+	while (idx < num)
 	{
 		if (*temp == value)
 			return (ptr);

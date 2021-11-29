@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:56:11 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/27 20:49:44 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/29 18:18:15 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,19 @@ static int	get_len(long long n)
 	return (size);
 }
 
+static void	ass_temp(long long temp, int size, char *str, int n)
+{
+	while (temp > 0)
+	{
+		str[--size] = temp % 10 + '0';
+		temp = temp / 10;
+	}
+	if (n == 0)
+		str[0] = '0';
+	if (n < 0)
+		str[0] = '-';
+}
+
 char	*ft_itoa(int n)
 {
 	long long	temp;
@@ -45,16 +58,10 @@ char	*ft_itoa(int n)
 	}
 	size += get_len(temp);
 	str = (char *) malloc (sizeof(char) * (size + 1));
+	if (str == NULL)
+		return (NULL);
 	str[size] = '\0';
-	while (temp > 0)
-	{		
-		str[--size] = temp % 10 + '0';
-		temp = temp / 10;
-	}
-	if (n == 0)
-		str[0] = '0';
-	if (n < 0)
-		str[0] = '-';
+	ass_temp(temp, size, str, n);
 	return (str);
 }
 /*

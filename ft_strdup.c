@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 06:07:04 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:21:36 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/29 18:19:12 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strdup(char *src)
 	tidx = 0;
 	len = ft_strlen(src);
 	temp = (char *) malloc (sizeof(char) * len + 1);
+	if (temp == NULL)
+		return (NULL);
 	while (src[sidx])
 	{
 		temp[tidx++] = src[sidx++];

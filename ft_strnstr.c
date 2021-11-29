@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:08:40 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/26 15:33:58 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/29 18:23:35 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	idx = 0;
 	llen = 0;
-	while (little[llen])
-		llen++;
 	if (little == 0)
 		return ((char *) big);
+	if (len == 0)
+		return (0);
+	llen = ft_strlen((char *)little);
 	while (idx + llen < len && big[idx] != 0)
 	{
 		if (find_str(big + idx, little, len) == 1)

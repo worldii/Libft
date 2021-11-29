@@ -6,25 +6,31 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 00:51:17 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/27 19:33:32 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/11/29 18:24:25 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // memcpy 와 거의 비슷 단, memmove 는 버퍼에 옮긴다는 차이가 있다. 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *source, size_t num)
+void	*ft_memmove(void *dest, const void *src, size_t num)
 {
 	size_t	idx;
-	char	*buf;
 
-	buf = (char *) malloc (sizeof(char) * (num + 1));
-	idx = -1;
-	while (++idx < num)
-		((unsigned char *) buf)[idx] = ((unsigned char *) source)[idx];
-	idx = -1;
-	while (++idx < num)
-		((unsigned char *)dest)[idx] = ((unsigned char *)buf)[idx];
+	if (dest == NULL && src == NULL && num > 0)
+		return (dest);
+	if (src < dest)
+	{
+		idx = num ;
+		while (idx-- > 0)
+			((unsigned char *)dest)[idx] = ((unsigned char *)src)[idx];
+	}
+	else
+	{
+		idx = -1;
+		while (++idx < num)
+			((unsigned char *)dest)[idx] = ((unsigned char *)src)[idx];
+	}
 	return (dest);
 }
 /*
