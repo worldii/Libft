@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 00:43:22 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/29 18:24:07 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/12/01 15:18:13 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,18 @@ static int	count_word(char const *s, char c)
 	return (count);
 }
 
-static void	ass_word(char const *s, char c, char **word, int *widx)
+static char	**free_word(char **word, int widx)
+{
+	int	idx;
+
+	idx = 0;
+	while (idx < widx)
+		free(word[idx++]);
+	free(word);
+	return (NULL);
+}
+
+static int	ass_word(char const *s, char c, char **word, int *widx)
 {
 	int	tempcount;
 
@@ -53,12 +64,13 @@ static void	ass_word(char const *s, char c, char **word, int *widx)
 			word[*widx] = (char *) malloc(sizeof(char) * (tempcount + 1));
 			tempcount = 0;
 			if (word[*widx] == NULL)
-				return ;
+				return (-1);
 			while (*s && *s != c)
 				word[*widx][tempcount++] = *s++;
 			word[(*widx)++][tempcount] = '\0';
 		}
 	}
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -72,20 +84,8 @@ char	**ft_split(char const *s, char c)
 	word = (char **) malloc (sizeof(char *) * (count + 1));
 	if (word == NULL)
 		return (NULL);
-	ass_word(s, c, word, &widx);
+	if (ass_word(s, c, word, &widx) == -1)
+		return (free_word(word, widx));
 	word[count] = NULL;
 	return (word);
 }
-/*
-#include<stdio.h>
-
-int main(void)
-{
-	char const str[100] = "hello everybody";
-	char ** word = ft_split(str,' ');
-	for (int i = 0 ; i< 2; i++)
-	{
-		printf("%s\n", word[i]);
-	}
-	return (0);
-}*/

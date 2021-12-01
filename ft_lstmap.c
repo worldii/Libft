@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 02:34:49 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/12/01 09:52:06 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/12/01 15:26:12 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	cur = lst;
 	while (cur)
 	{
-		new = ft_lstnew(f(lst->content));
+		new = ft_lstnew(f(cur->content));
 		if (new == NULL)
 		{
 			ft_lstclear(&templist, del);

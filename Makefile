@@ -6,7 +6,7 @@
 #    By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/26 14:50:35 by jonghapa          #+#    #+#              #
-#    Updated: 2021/12/01 13:18:19 by jonghapa         ###   ########.fr        #
+#    Updated: 2021/12/01 17:08:11 by jonghapa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,10 @@ all: $(NAME)
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
+
 $(NAME) : $(OBJ)
 	ar crs $@ $(OBJ)
+
 bonus : $(OBJ) $(BONUSOBJ)
 	ar crs $(NAME) $(OBJ) $(BONUSOBJ)
 clean :
@@ -40,7 +42,5 @@ clean :
 
 fclean: clean
 	rm -f $(NAME)
-
-re : fclean all
-
-.PHONY: clean fclean re $(NAME) all
+re :fclean all
+.PHONY: clean fclean re all

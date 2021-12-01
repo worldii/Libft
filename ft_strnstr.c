@@ -6,11 +6,12 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:08:40 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/12/01 13:22:57 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/12/01 16:42:01 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	find_str(const char *big, const char *little, size_t len)
 {
@@ -35,10 +36,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	idx = 0;
 	llen = 0;
-	if (little[0] == 0 || len == 0)
+	if (little[0] == 0)
 		return ((char *) big);
 	llen = ft_strlen((char *)little);
-	while (idx + llen < len && big[idx] != 0)
+	while (big[idx] != 0 && idx + llen <= len)
 	{
 		if (find_str(big + idx, little, len) == 1)
 			return ((char *)(big + idx));
@@ -46,8 +47,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 int main(){
-	printf("%s %s ", ft_strnstr(NULL, " ", -1), ft_strnstr(NULL, " ", -1)); }
+	printf("%s", strnstr(NULL, "fake", 3)); }*/

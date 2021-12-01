@@ -6,13 +6,13 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 06:07:04 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/29 18:19:12 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/12/01 17:19:58 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*temp;
 	int		len;

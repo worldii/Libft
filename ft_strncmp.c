@@ -6,12 +6,12 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:20:06 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/29 18:19:47 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/12/01 14:59:06 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int				s1idx;
 	int				s2idx;

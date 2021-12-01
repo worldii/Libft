@@ -6,12 +6,12 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:07:45 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/27 04:22:27 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/12/01 15:01:28 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	idx;
 
