@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:08:40 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/12/01 11:39:30 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/12/01 13:22:57 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 #include <string.h>
 #include <stdio.h>
-int main() {
-	printf("%s %s", ft_strnstr("", " ", -1), strnstr("", " ", -1)); }
+int main(){
+	printf("%s %s ", ft_strnstr(NULL, " ", -1), ft_strnstr(NULL, " ", -1)); }
