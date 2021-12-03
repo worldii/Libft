@@ -6,7 +6,7 @@
 #    By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/26 14:50:35 by jonghapa          #+#    #+#              #
-#    Updated: 2021/12/01 19:30:09 by jonghapa         ###   ########.fr        #
+#    Updated: 2021/12/03 13:54:11 by jonghapa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,17 +26,24 @@ BONUSSRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_bac
 		   ft_lstclear.c ft_lstiter.c ft_lstmap.c
 BONUSOBJ = $(BONUSSRC:.c=.o)
 
+ifdef WITH_BONUS
+	OBJECTS = $(OBJ) $(BONUSOBJ)
+else
+	OBJECTS = $(OBJ)
+endif
+
 all: $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
 
-$(NAME) : $(OBJ)
-	ar crs $@ $(OBJ)
+$(NAME) : $(OBJECTS)
+	ar crs $@ $^
 
-bonus : $(OBJ) $(BONUSOBJ)
-	ar crs $(NAME) $(OBJ) $(BONUSOBJ)
+bonus : 
+	@make WITH_BONUS=1 all
+
 clean :
 	rm -f $(OBJ) $(BONUSOBJ)
 
