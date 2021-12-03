@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:56:11 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/11/29 18:18:15 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:48:50 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,3 @@ char	*ft_itoa(int n)
 	ass_temp(temp, size, str, n);
 	return (str);
 }
-/*
-#include<stdio.h>
-int main(void)
-{
-	char *temp = ft_itoa(-2147483648);
-	printf("%s", temp);
-}*/

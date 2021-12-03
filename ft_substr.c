@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 23:52:41 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/12/01 18:13:03 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:52:49 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		slen;
 	int		llen;
 
-	if (s == NULL)
-		return (NULL);
 	slen = ft_strlen((char *)s);
 	llen = len;
 	if ((unsigned int) slen < start)

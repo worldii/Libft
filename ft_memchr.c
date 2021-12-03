@@ -6,7 +6,7 @@
 /*   By: jonghapa <bbc2788@naver.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:43:24 by jonghapa          #+#    #+#             */
-/*   Updated: 2021/12/01 15:05:18 by jonghapa         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:18:37 by jonghapa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -28,20 +28,3 @@ void	*ft_memchr(void	*ptr, int value, size_t num)
 	}
 	return (0);
 }
-
-/*
-#include<stdio.h>
-#include<string.h>
-int main(void)
-{
-
-	char * pch;
-	  char str[] = "Example string";
-
-	  pch = (char*)ft_memchr(str, 'p', strlen(str));
-
-  if (pch != NULL)
-    printf("'p' found at position %d.\n", pch - str + 1);
-  else
-    printf("'p' not found.\n");
-}*/
